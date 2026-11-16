@@ -28,7 +28,7 @@ ll-753, ll-672) with arrows · footer nav.
 
 ## New or adapted copy needing approval
 
-**Version A:** top button "Contact me" + mailto subject "Inquiry for officiant" with a prefilled details template (user-requested, 2026-11-16); booking eyebrow shortened to "Book a free consultation" (user asked for fewer words, 2026-11-16); "I do with Dave" tagline (replaced "Married by Dave") and "Book a free consultation" top-bar button (both approved by the user, 2026-11-16); the card eyebrows "15–30 MINUTES", "10 MINUTES", "THREE MOMENTS" (facts from the PDF) and the button "Book a free consultation →" (shortened from the PDF call to action).
+**Version A:** top button "Contact me" + mailto subject "Inquiry for wedding officiant" with a loose bracketed guidance note (user-requested, 2026-11-16); booking eyebrow shortened to "Book a free consultation" (user asked for fewer words, 2026-11-16); "Weddings by Dave" tagline (replaced "I do with Dave" / "Married by Dave") and "Book a free consultation" top-bar button (both approved by the user, 2026-11-16); the card eyebrows "15–30 MINUTES", "10 MINUTES", "THREE MOMENTS" (facts from the PDF) and the button "Book a free consultation →" (shortened from the PDF call to action).
 
 **Version B (reference):**
 
