@@ -143,7 +143,7 @@ html { scroll-padding-top: 88px; }
 .services {
   display: flex; flex-direction: column; gap: 72px;
   padding: 120px var(--gutter) 144px;
-  background: var(--color-paper);
+  background: var(--color-white);
 }
 .services__head { display: flex; justify-content: space-between; align-items: flex-end; }
 .services__cards { display: flex; gap: 24px; }
@@ -260,22 +260,16 @@ html { scroll-padding-top: 88px; }
   font-family: var(--font-display); font-weight: var(--font-weight-regular);
   font-size: clamp(28px, 5.6vw, 80px); letter-spacing: -0.02em;
   color: var(--color-white); text-decoration: none;
-  padding-bottom: 12px; border-bottom: 2px solid var(--color-brass);
   overflow-wrap: anywhere;
+  transition: opacity 0.2s;
 }
-.booking__email:hover { border-bottom-color: var(--color-linen); }
+.booking__email:hover { opacity: 0.75; }
+.booking__email:active { opacity: 0.5; }
+.booking__affiliation {
+  position: absolute; z-index: 1; left: var(--gutter); right: var(--gutter); bottom: 32px;
+  font-style: italic; font-size: var(--text-small); color: var(--color-linen); text-align: center;
+}
 .booking__phone { color: var(--color-linen); letter-spacing: var(--tracking-wide); text-decoration: none; }
-
-/* ---------- Footer ---------- */
-.site-footer {
-  display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;
-  padding: 56px var(--gutter) 40px;
-  background: var(--color-forest-deep);
-}
-.site-footer__mark { font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: 40px; letter-spacing: -0.01em; color: var(--color-linen); }
-.site-footer__links { display: flex; gap: 32px; font-weight: var(--font-weight-medium); font-size: var(--text-small); color: var(--color-linen); }
-.site-footer__links a { text-decoration: none; }
-.site-footer__note { font-style: italic; font-size: var(--text-small); color: var(--color-sage); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
@@ -307,5 +301,4 @@ html { scroll-padding-top: 88px; }
   .quote-panel__frame { padding: 24px; }
   .quote-panel__inner { padding: 48px 24px; }
   .booking { min-height: 600px; }
-  .site-footer { flex-direction: column; align-items: flex-start; }
 }

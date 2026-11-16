@@ -28,7 +28,7 @@ ll-753, ll-672) with arrows · footer nav.
 
 ## New or adapted copy needing approval
 
-**Version A:** "I do with Dave" tagline (replaced "Married by Dave") and "Book a free consultation" top-bar button (both approved by the user, 2026-11-16); the card eyebrows "15–30 MINUTES", "10 MINUTES", "THREE MOMENTS" (facts from the PDF) and the button "Book a free consultation →" (shortened from the PDF call to action).
+**Version A:** booking eyebrow shortened to "Book a free consultation" (user asked for fewer words, 2026-11-16); "I do with Dave" tagline (replaced "Married by Dave") and "Book a free consultation" top-bar button (both approved by the user, 2026-11-16); the card eyebrows "15–30 MINUTES", "10 MINUTES", "THREE MOMENTS" (facts from the PDF) and the button "Book a free consultation →" (shortened from the PDF call to action).
 
 **Version B (reference):**
 
