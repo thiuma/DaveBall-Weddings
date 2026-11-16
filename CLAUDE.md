@@ -11,6 +11,14 @@ One-page, fully responsive site. Vite + plain HTML/CSS/JS, deployed to GitHub Pa
 - The PDF's building blocks (hero, intro letter, includes checklist, services with prices, testimonial,
   ceremony photo, booking CTA, affiliation footer) define the sections and offerings to build.
 
+## Design references (Paper file `daveball-weddings`)
+- Layout only: take structure, grid, spacing and block anatomy, never their colours, fonts or copy.
+- `design/reference-1-laurie.md`: wedding-planner template, centred/romantic blocks **L1–L9**.
+- `design/reference-2-kinsley.md`: tutoring template, left-aligned/editorial blocks **K1–K14**.
+- When the user names a block (e.g. "use K6"), adapt that block to our brand tokens and content.
+- Brand guide → Paper design tokens + `src/styles/tokens.css` with the same names; designs and code
+  use only tokens, so edits apply everywhere.
+
 ## Workflow
 - Design references come from Paper.
 - Phase 1: layout and UI. Phase 2 (later): interactions and animations.
