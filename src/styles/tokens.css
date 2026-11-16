@@ -1,14 +1,14 @@
 /*
  * DaveBall Weddings — brand tokens (single source of truth).
  * Same names as the design tokens in the Paper file, so design and code stay linked.
- * Mood: botanical linen — forest-green bands, linen cards, brass candle lanterns.
+ * Mood: botanical — forest-green bands, sage-mist panels, brass candle lanterns.
  */
 :root {
   /* Brand */
   --color-forest: #4b5b48;        /* primary brand colour */
   --color-forest-deep: #2f3a2d;   /* dark sections, hover, text on light */
   /* Secondary */
-  --color-linen: #f1ede6;         /* warm section ground */
+  --color-mist: #edf0ea;          /* light sage-grey section ground (replaced the sandy linen) */
   --color-sage: #9ba296;          /* soft green: rules, quiet fills */
   --color-brass: #b08d57;         /* single warm accent: prices, signature, ornament */
   /* Grayscale (green-tinted neutral) */
@@ -70,6 +70,7 @@
 
   /* Radius */
   --radius-none: 0px;
+  --radius-md: 12px;              /* default soft corner: cards, buttons, panels, photos */
   --radius-pill: 999px;
   --radius-arch: 9999px 9999px 0 0;
 }
