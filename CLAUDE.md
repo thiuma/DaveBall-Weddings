@@ -3,8 +3,16 @@
 One-page, fully responsive site. Vite + plain HTML/CSS/JS, deployed to GitHub Pages
 (https://thiuma.github.io/DaveBall-Weddings/) on every push to `main`.
 
+## Content
+- Site: Dave Ball, Licensed Wedding Officiant (Toronto/GTA). Offerings: Full length ceremony ($750+HST),
+  Pre-wedding signing ($600+HST), Legal attending ($500+HST).
+- **All copy comes from `content/content.md`**, a verbatim transcription of `content/dave-ball-officiant-one-pager.pdf`.
+  Any new or reworded copy is only a suggestion and needs the user's approval. Never fix flagged typos silently.
+- The PDF's building blocks (hero, intro letter, includes checklist, services with prices, testimonial,
+  ceremony photo, booking CTA, affiliation footer) define the sections and offerings to build.
+
 ## Workflow
-- Design references come from Paper; copy comes from a PDF the user provides.
+- Design references come from Paper.
 - Phase 1: layout and UI. Phase 2 (later): interactions and animations.
 - One short-lived branch per round of work, merged into `main` via pull request. `main` is not branch-protected.
 
