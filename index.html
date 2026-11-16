@@ -3,20 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DaveBall Weddings</title>
-    <meta name="description" content="DaveBall Weddings" />
+    <title>Dave Ball — Licensed Wedding Officiant</title>
+    <meta name="description" content="Dave Ball, licensed wedding officiant in Toronto/GTA. Fully customized ceremonies that reflect your unique story." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <main id="top">
-      <!-- Sections are built here from the Paper references and the PDF content. -->
-      <section class="section placeholder">
-        <div class="container">
-          <h1>DaveBall Weddings</h1>
-          <p>Coming soon.</p>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="ornament" viewBox="0 0 100 100"><path d="M50 0 C54 34 66 46 100 50 C66 54 54 66 50 100 C46 66 34 54 0 50 C34 46 46 34 50 0Z" /></symbol>
+    </svg>
+
+    <main>
+      <!-- Hero -->
+      <header class="hero">
+        <div class="hero__photo">
+          <img class="photo" src="/images/ll-777-2000.jpg" srcset="/images/ll-777-1000.jpg 1000w, /images/ll-777-2000.jpg 2000w" sizes="100vw" alt="A bride laughing at the altar as Dave Ball officiates the ceremony" fetchpriority="high" />
+        </div>
+        <div class="wordmark">
+          <h1 class="wordmark__name">DAVE BALL</h1>
+          <div class="wordmark__meta">
+            <p class="wordmark__title">LICENSED WEDDING OFFICIANT</p>
+            <p class="wordmark__contact">
+              <a href="mailto:weddings@heydaveball.com">weddings@heydaveball.com</a>
+              <a href="tel:+19056167678">905 616-7678</a>
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Welcome -->
+      <section class="welcome" aria-label="Welcome">
+        <svg class="ornament" aria-hidden="true"><use href="#ornament" /></svg>
+        <p class="welcome__text">If you are reading this: <strong>Congratulations!</strong> It means you’re about to embark on one of life’s truly special milestones.</p>
+      </section>
+
+      <!-- About -->
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about__text">
+          <p class="label about__eyebrow">Accredited Interfaith Official</p>
+          <h2 class="about__lead" id="about-title">I believe that love is love — faith or no faith.</h2>
+          <p class="about__body">It’s an honour to be considered to be your legal officiant for this rare occasion. With fully customized ceremonies that reflect your unique story, my mission is to highlight that special thing that brings the two of you together, and to facilitate sharing that singular connection with your community. As an Accredited Interfaith Official, I believe that love is love, and I specialize in weddings that blend each couple’s unique backgrounds and traditions - faith or no faith. Co-creating a ceremony with me is about centering you, your story, and - dare I say - having fun along the way.</p>
+        </div>
+        <figure class="about__portrait">
+          <img class="photo" src="/images/pxl-180407131-1000.jpg" srcset="/images/pxl-180407131-1000.jpg 1000w, /images/pxl-180407131-2000.jpg 2000w" sizes="(max-width: 760px) 100vw, 600px" alt="Portrait of Dave Ball smiling" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- Services -->
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="services__head">
+          <h2 class="section-title" id="services-title">My services</h2>
+          <svg class="ornament" aria-hidden="true"><use href="#ornament" /></svg>
+        </div>
+
+        <div class="services__offer">
+        <div class="services__cards">
+          <article class="card card--featured">
+            <p class="label card__eyebrow"><svg class="ornament ornament--sm" aria-hidden="true"><use href="#ornament" /></svg>15–30 minutes</p>
+            <h3 class="card__title">Full length ceremony</h3>
+            <p class="card__body">The full package for those seeking a qualified officiant to guide them through the creation and facilitation of their individual wedding ceremony. Ceremonies typically run 15-30 minutes inclusive of readings, vows, and signing of marriage documentation.</p>
+            <div class="card__foot">
+              <p class="card__price">$750<small>+HST</small></p>
+              <a class="card__cta" href="mailto:weddings@heydaveball.com?subject=Full%20length%20ceremony%20consultation">Book a free consultation →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="label card__eyebrow"><svg class="ornament ornament--sm" aria-hidden="true"><use href="#ornament" /></svg>10 minutes</p>
+            <h3 class="card__title">Pre-wedding signing</h3>
+            <p class="card__body">For those looking to elope, or those interested in tying the knot without all the bells and whistles, this short ceremony checks all the legal boxes without sacrificing significance or emotion. Ceremonies are typically 10 minutes in length.</p>
+            <div class="card__foot">
+              <p class="card__price">$600<small>+HST</small></p>
+              <a class="card__cta" href="mailto:weddings@heydaveball.com?subject=Pre-wedding%20signing%20consultation">Book a free consultation →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="label card__eyebrow"><svg class="ornament ornament--sm" aria-hidden="true"><use href="#ornament" /></svg>Three moments</p>
+            <h3 class="card__title">Legal attending</h3>
+            <p class="card__body">If you are interested in a friend or family member performing the ceremony, I am available to be present and support you by facilitating the legal elements of the marriage in three moments: statements, licence signing, and announcement.</p>
+            <div class="card__foot">
+              <p class="card__price">$500<small>+HST</small></p>
+              <a class="card__cta" href="mailto:weddings@heydaveball.com?subject=Legal%20attending%20consultation">Book a free consultation →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="included-panel">
+          <div class="included-panel__group">
+            <h3 class="included-panel__title">All services include</h3>
+            <ul class="included-panel__list included-panel__list--two-col">
+              <li><svg class="included-panel__icon" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /><path d="M5.5 10.5 L8.5 13.5 L14.5 7" /></svg><span>Initial complimentary virtual consultation</span></li>
+              <li><svg class="included-panel__icon" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /><path d="M5.5 10.5 L8.5 13.5 L14.5 7" /></svg><span>Virtual ceremony planning meeting</span></li>
+              <li><svg class="included-panel__icon" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /><path d="M5.5 10.5 L8.5 13.5 L14.5 7" /></svg><span>Unlimited revisions of ceremony</span></li>
+              <li><svg class="included-panel__icon" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /><path d="M5.5 10.5 L8.5 13.5 L14.5 7" /></svg><span>Legal officiating and submission of legalizing marriage documents</span></li>
+              <li><svg class="included-panel__icon" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /><path d="M5.5 10.5 L8.5 13.5 L14.5 7" /></svg><span>Travel within Toronto/GTA</span></li>
+            </ul>
+          </div>
+          <div class="included-panel__group included-panel__group--extras">
+            <h3 class="included-panel__title">Other considerations</h3>
+            <ul class="included-panel__list">
+              <li><svg class="included-panel__icon included-panel__icon--extra" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" /><path d="M10 5.5 V14.5 M5.5 10 H14.5" /></svg><span>Rehearsal attendance available</span></li>
+              <li><svg class="included-panel__icon included-panel__icon--extra" aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" /><path d="M10 5.5 V14.5 M5.5 10 H14.5" /></svg><span>Travel fee for celebrations in Muskoka, Cambridge, Niagara, etc.</span></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="quote-panel" aria-label="Testimonial">
+        <div class="quote-panel__frame">
+          <figure class="quote-panel__inner">
+            <svg class="ornament" aria-hidden="true"><use href="#ornament" /></svg>
+            <blockquote class="quote-panel__text">“Dave made us feel confident and comfortable. If we could do it again, we would pick Dave a million times!”</blockquote>
+            <figcaption class="signature">Leanne &amp; Louis</figcaption>
+          </figure>
+        </div>
+        <figure class="quote-panel__photo">
+          <img class="photo" src="/images/ll-783-1000.jpg" srcset="/images/ll-783-1000.jpg 1000w, /images/ll-783-2000.jpg 2000w" sizes="(max-width: 760px) 100vw, 580px" alt="The bride at the altar with Dave Ball during the ceremony" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- Booking -->
+      <section class="booking" id="contact" aria-labelledby="booking-title">
+        <img class="photo booking__bg" src="/images/ll-758-2000.jpg" srcset="/images/ll-758-1000.jpg 1000w, /images/ll-758-2000.jpg 2000w" sizes="100vw" alt="" loading="lazy" />
+        <div class="booking__content">
+          <h2 class="label booking__lead" id="booking-title">To book your free virtual consultation email</h2>
+          <a class="booking__email" href="mailto:weddings@heydaveball.com">weddings@heydaveball.com</a>
+          <a class="booking__phone" href="tel:+19056167678">905 616-7678</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__mark">DAVE BALL</p>
+      <p class="site-footer__note">Affiliated with the Angels of the Earth Interfaith Community</p>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

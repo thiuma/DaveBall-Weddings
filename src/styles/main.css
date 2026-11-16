@@ -1,51 +1,291 @@
-/* Design tokens: placeholders until the Paper references define the real palette and type. */
-:root {
-  --color-bg: #ffffff;
-  --color-text: #111111;
-  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --container-max: 1280px;
-  --gutter: clamp(16px, 4vw, 48px);
-  --section-space: clamp(64px, 10vw, 160px);
-}
+@import './tokens.css';
 
+/* ---------- Base ---------- */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-paper);
+  color: var(--color-ink);
   font-family: var(--font-body);
-  line-height: 1.5;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
   -webkit-font-smoothing: antialiased;
 }
 
-img,
-picture,
-video,
-svg {
-  display: block;
-  max-width: 100%;
+img { display: block; max-width: 100%; }
+h1, h2, h3, h4, p, ul, blockquote, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-h1, h2, h3, h4, p {
-  margin: 0;
+:focus-visible { outline: 2px solid var(--color-brass); outline-offset: 3px; }
+
+/* ---------- Shared pieces ---------- */
+.ornament { width: 36px; height: 36px; flex-shrink: 0; fill: var(--color-brass); }
+.ornament--sm { width: 14px; height: 14px; }
+
+.photo { width: 100%; height: 100%; object-fit: cover; }
+
+.label {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
 }
 
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
+.section-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(48px, 6.7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-forest);
 }
 
-.section {
-  padding-block: var(--section-space);
+/* ---------- Hero ---------- */
+.hero { position: relative; }
+.hero__photo { height: clamp(420px, 57vw, 820px); overflow: hidden; }
+.hero__photo .photo { object-position: 50% 40%; }
+
+.wordmark {
+  display: flex; flex-direction: column; gap: 28px;
+  padding: 56px var(--gutter) 64px;
+  background: var(--color-paper);
+}
+.wordmark__name {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-extrabold);
+  font-size: clamp(56px, 16.5vw, 238px);
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+  color: var(--color-forest);
+  white-space: nowrap;
+}
+.wordmark__meta {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-gray-300);
+  font-size: var(--text-small);
+}
+.wordmark__title { font-weight: var(--font-weight-medium); letter-spacing: var(--tracking-caps); color: var(--color-ink); }
+.wordmark__contact { display: flex; gap: 8px 40px; flex-wrap: wrap; color: var(--color-gray-700); }
+.wordmark__contact a { text-decoration: none; }
+.wordmark__contact a:hover { text-decoration: underline; }
+
+/* ---------- Welcome statement ---------- */
+.welcome {
+  display: flex; flex-direction: column; align-items: center; gap: 40px;
+  padding: clamp(96px, 11vw, 160px) clamp(24px, 14vw, 200px);
+  background: var(--color-white);
+}
+.welcome__text {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(30px, 3.6vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--color-forest-deep);
+  text-align: center;
+  max-width: 1040px;
+}
+.welcome__text strong { font-weight: 600; color: var(--color-forest); }
+
+/* ---------- About ---------- */
+.about {
+  display: flex; align-items: center; gap: var(--spacing-2xl);
+  padding: 120px var(--gutter) 120px 120px;
+  background: var(--color-linen);
+}
+.about__text { display: flex; flex-direction: column; gap: 32px; flex: 1; }
+.about__eyebrow { color: var(--color-brass); }
+.about__lead {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(30px, 2.8vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-forest-deep);
+}
+.about__body { color: var(--color-gray-700); line-height: 1.65; }
+.about__portrait {
+  width: 600px; height: 780px; flex-shrink: 0;
+  border-radius: 300px 300px 0 0; overflow: hidden;
+}
+.about__portrait .photo { object-position: 72% 40%; }
+
+/* ---------- Services: cards ---------- */
+.services {
+  display: flex; flex-direction: column; gap: 72px;
+  padding: 120px var(--gutter) 144px;
+  background: var(--color-paper);
+}
+.services__head { display: flex; justify-content: space-between; align-items: flex-end; }
+.services__cards { display: flex; gap: 24px; }
+
+.card {
+  flex: 1;
+  display: flex; flex-direction: column;
+  min-height: 600px;
+  padding: 48px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+}
+.card__eyebrow { display: flex; align-items: center; gap: 12px; padding-bottom: 28px; color: var(--color-gray-700); }
+.card__title {
+  min-height: 100px;
+  padding-bottom: 24px;
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
+  font-size: 34px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-forest-deep);
+}
+.card__body { flex: 1; padding-bottom: 40px; font-size: 17px; line-height: 1.65; color: var(--color-gray-700); }
+.card__foot {
+  display: flex; flex-direction: column; gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-gray-300);
+}
+.card__price {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  color: var(--color-forest-deep);
+}
+.card__price small { font-size: 16px; font-weight: var(--font-weight-regular); letter-spacing: 0.02em; color: var(--color-gray-700); }
+.card__cta {
+  display: flex; justify-content: center; align-items: center;
+  min-height: 52px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-forest);
+  color: var(--color-forest-deep);
+  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.card__cta:hover { background: var(--color-forest); color: var(--color-white); }
+
+.card--featured { background: var(--color-forest-deep); border-color: var(--color-forest-deep); }
+.card--featured .card__eyebrow,
+.card--featured .card__body,
+.card--featured .card__price small { color: var(--color-linen); }
+.card--featured .card__title,
+.card--featured .card__price { color: var(--color-white); }
+.card--featured .card__foot { border-top-color: color-mix(in srgb, var(--color-linen) 30%, transparent); }
+.card--featured .card__cta { background: var(--color-linen); border-color: var(--color-linen); }
+.card--featured .card__cta:hover { background: var(--color-white); color: var(--color-forest-deep); }
+
+/* ---------- Included panel (part of services) ---------- */
+.services__offer { display: flex; flex-direction: column; gap: 24px; }
+.included-panel {
+  display: flex; gap: 64px;
+  padding: 48px;
+  background: var(--color-linen);
+}
+.included-panel__group { flex: 2; display: flex; flex-direction: column; gap: 28px; }
+.included-panel__group--extras { flex: 1; padding-left: 64px; border-left: 1px solid var(--color-gray-300); }
+.included-panel__title {
+  font-family: var(--font-display); font-weight: var(--font-weight-regular);
+  font-size: var(--text-lead); letter-spacing: -0.015em; color: var(--color-forest-deep);
+}
+.included-panel__list { display: flex; flex-direction: column; gap: 18px; color: var(--color-gray-700); font-size: 17px; line-height: 1.5; }
+.included-panel__list--two-col { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 18px; }
+.included-panel__list li { display: flex; gap: 14px; align-items: flex-start; }
+.included-panel__icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; fill: var(--color-forest); }
+.included-panel__icon path { fill: none; stroke: var(--color-white); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.included-panel__icon--extra { fill: none; }
+.included-panel__icon--extra circle { stroke: var(--color-gray-500); stroke-width: 1; }
+.included-panel__icon--extra path { stroke: var(--color-gray-700); stroke-width: 1.4; }
+
+/* ---------- Testimonial: quote panel ---------- */
+.signature { font-family: var(--font-script); font-size: 56px; line-height: 1; color: var(--color-brass); }
+.quote-panel { display: flex; min-height: 840px; background: var(--color-linen); }
+.quote-panel__frame { flex: 1; display: flex; padding: 40px; }
+.quote-panel__inner {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 48px;
+  padding: 72px 48px 64px;
+  border: 1px solid color-mix(in srgb, var(--color-sage) 70%, transparent);
+}
+.quote-panel__text {
+  font-family: var(--font-display); font-weight: var(--font-weight-light);
+  font-size: clamp(30px, 3.5vw, 50px); line-height: 1.18; letter-spacing: -0.025em;
+  color: var(--color-forest-deep); text-align: center;
+}
+.quote-panel .signature { font-size: 52px; }
+.quote-panel__photo { width: 580px; flex-shrink: 0; overflow: hidden; }
+.quote-panel__photo .photo { object-position: 50% 30%; }
+
+/* ---------- Booking CTA ---------- */
+.booking {
+  position: relative; min-height: 760px; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 96px var(--gutter);
+  text-align: center;
+}
+.booking__bg { position: absolute; inset: 0; }
+.booking::after { content: ''; position: absolute; inset: 0; background: color-mix(in srgb, var(--color-forest-deep) 72%, transparent); }
+.booking__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.booking__lead { color: var(--color-linen); font-size: var(--text-small); }
+.booking__email {
+  font-family: var(--font-display); font-weight: var(--font-weight-light);
+  font-size: clamp(30px, 5.6vw, 80px); letter-spacing: -0.035em;
+  color: var(--color-white); text-decoration: none;
+  padding-bottom: 12px; border-bottom: 2px solid var(--color-brass);
+  overflow-wrap: anywhere;
+}
+.booking__email:hover { border-bottom-color: var(--color-linen); }
+.booking__phone { color: var(--color-linen); letter-spacing: var(--tracking-wide); text-decoration: none; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;
+  padding: 56px var(--gutter) 40px;
+  background: var(--color-forest-deep);
+}
+.site-footer__mark { font-family: var(--font-display); font-weight: var(--font-weight-extrabold); font-size: 40px; letter-spacing: -0.03em; color: var(--color-linen); }
+.site-footer__links { display: flex; gap: 32px; font-weight: var(--font-weight-medium); font-size: var(--text-small); color: var(--color-linen); }
+.site-footer__links a { text-decoration: none; }
+.site-footer__note { font-style: italic; font-size: var(--text-small); color: var(--color-sage); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  :root { --gutter: 24px; }
+  .about { padding: 96px var(--gutter); gap: 56px; }
+  .about__portrait { width: 44%; height: auto; aspect-ratio: 600 / 780; }
+  .services__cards { flex-direction: column; }
+  .card { min-height: 0; }
+  .card__title { min-height: 0; }
+  .included-panel { flex-direction: column; gap: 40px; }
+  .included-panel__group--extras { padding-left: 0; padding-top: 40px; border-left: 0; border-top: 1px solid var(--color-gray-300); }
+  .quote-panel__photo { width: 42%; }
+}
+
+@media (max-width: 760px) {
+  .wordmark__name { font-size: 14.6vw; }
+  .about { flex-direction: column-reverse; align-items: stretch; }
+  .about__portrait { width: 100%; }
+  .services { gap: 48px; padding: 96px var(--gutter); }
+  .card { padding: 32px 24px; }
+  .included-panel { padding: 32px 24px; }
+  .included-panel__list--two-col { grid-template-columns: 1fr; }
+  .quote-panel { flex-direction: column-reverse; min-height: 0; }
+  .quote-panel__photo { width: 100%; height: 420px; }
+  .quote-panel__frame { padding: 24px; }
+  .quote-panel__inner { padding: 48px 24px; }
+  .booking { min-height: 600px; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
 }
