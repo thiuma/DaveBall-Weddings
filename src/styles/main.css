@@ -79,19 +79,30 @@ a { color: inherit; }
 
 /* ---------- Hero ---------- */
 html { scroll-padding-top: 88px; }
-.hero__photo { height: clamp(460px, 60vw, 860px); overflow: hidden; }
+/* The hero always fills exactly one screen: the tagline block keeps its natural
+   height and the photo takes whatever is left, so the headline and the
+   "Licensed Wedding Officiant" line are always visible on first load. */
+.hero {
+  display: flex; flex-direction: column;
+  height: 100vh;            /* fallback for older browsers */
+  height: 100dvh;
+  min-height: 560px;        /* very short windows scroll instead of crushing the photo */
+}
+.hero__photo { flex: 1 1 auto; min-height: 240px; overflow: hidden; }
 .hero__photo .photo { object-position: 50% 42%; }
 
 .tagline {
   display: flex; flex-direction: column; align-items: center; gap: 20px;
-  padding: 72px var(--gutter) 24px;
+  flex-shrink: 0;
+  padding: clamp(32px, 5dvh, 64px) var(--gutter) clamp(28px, 4dvh, 48px);
   background: var(--color-white);
   text-align: center;
 }
 .tagline__text {
   font-family: var(--font-display);
   font-weight: var(--font-weight-regular);
-  font-size: clamp(56px, 11vw, 168px);
+  /* scales with width, but also with height so short screens keep room for the photo */
+  font-size: clamp(56px, min(11vw, 17dvh), 168px);
   line-height: 0.95;
   letter-spacing: -0.02em;
   color: var(--color-forest);
@@ -247,9 +258,11 @@ html { scroll-padding-top: 88px; }
 
 /* ---------- Booking CTA ---------- */
 .booking {
-  position: relative; min-height: 760px; overflow: hidden;
+  position: relative; overflow: hidden;
+  min-height: 100vh;        /* fallback */
+  min-height: 100dvh;       /* always a full-screen splash at the end of the page */
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  padding: 96px var(--gutter);
+  padding: 96px var(--gutter) 160px;
   text-align: center;
 }
 .booking__bg { position: absolute; inset: 0; }
@@ -266,7 +279,7 @@ html { scroll-padding-top: 88px; }
 .booking__email:hover { opacity: 0.75; }
 .booking__email:active { opacity: 0.5; }
 .booking__affiliation {
-  position: absolute; z-index: 1; left: var(--gutter); right: var(--gutter); bottom: 32px;
+  position: absolute; z-index: 1; left: var(--gutter); right: var(--gutter); bottom: 64px;
   font-style: italic; font-size: var(--text-small); color: var(--color-linen); text-align: center;
 }
 .booking__phone { color: var(--color-linen); letter-spacing: var(--tracking-wide); text-decoration: none; }
@@ -285,8 +298,9 @@ html { scroll-padding-top: 88px; }
 }
 
 @media (max-width: 760px) {
-  .tagline__text { font-size: 15vw; }
-  .hero__photo { height: 125vw; }
+  /* phones: use the small viewport height so the hero doesn't jump when the URL bar hides */
+  .hero { height: 100svh; min-height: 520px; }
+  .tagline__text { font-size: clamp(48px, min(15vw, 9svh), 96px); }
   .topbar { padding: 12px var(--gutter); }
   .topbar__mark { font-size: 18px; padding: 10px 14px; }
   .topbar__cta { padding: 10px 14px; font-size: 13px; }
@@ -300,5 +314,5 @@ html { scroll-padding-top: 88px; }
   .quote-panel__photo { width: 100%; height: 420px; }
   .quote-panel__frame { padding: 24px; }
   .quote-panel__inner { padding: 48px 24px; }
-  .booking { min-height: 600px; }
+  .booking { min-height: 100svh; }
 }
