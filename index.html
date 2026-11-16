@@ -7,7 +7,7 @@
     <meta name="description" content="Dave Ball, licensed wedding officiant in Toronto/GTA. Fully customized ceremonies that reflect your unique story." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
@@ -15,23 +15,33 @@
       <symbol id="ornament" viewBox="0 0 100 100"><path d="M50 0 C54 34 66 46 100 50 C66 54 54 66 50 100 C46 66 34 54 0 50 C34 46 46 34 50 0Z" /></symbol>
     </svg>
 
+    <header class="topbar">
+      <a class="topbar__mark" href="#tagline">Dave Ball</a>
+      <a class="topbar__cta" href="#contact">Book a free consultation</a>
+    </header>
+
     <main>
       <!-- Hero -->
-      <header class="hero">
-        <div class="hero__photo">
-          <img class="photo" src="/images/ll-777-2000.jpg" srcset="/images/ll-777-1000.jpg 1000w, /images/ll-777-2000.jpg 2000w" sizes="100vw" alt="A bride laughing at the altar as Dave Ball officiates the ceremony" fetchpriority="high" />
+      <section class="hero" aria-labelledby="tagline">
+        <div class="hero__collage">
+          <figure class="hero__panel hero__panel--side">
+            <img class="photo" src="/images/ll-1207-1000.jpg" srcset="/images/ll-1207-1000.jpg 1000w, /images/ll-1207-2000.jpg 2000w" sizes="30vw" alt="Dave Ball laughing with a microphone in hand at a wedding" />
+          </figure>
+          <figure class="hero__panel hero__panel--main">
+            <img class="photo" src="/images/ll-848-1000.jpg" srcset="/images/ll-848-1000.jpg 1000w, /images/ll-848-2000.jpg 2000w" sizes="(max-width: 760px) 100vw, 40vw" alt="A bride throwing her arms up in celebration at the altar as Dave Ball and the groom cheer" fetchpriority="high" />
+          </figure>
+          <figure class="hero__panel hero__panel--side">
+            <img class="photo" src="/images/ll-815-1000.jpg" srcset="/images/ll-815-1000.jpg 1000w, /images/ll-815-2000.jpg 2000w" sizes="30vw" alt="Wedding guests laughing in their seats during the ceremony" />
+          </figure>
         </div>
-        <div class="wordmark">
-          <h1 class="wordmark__name">DAVE BALL</h1>
-          <div class="wordmark__meta">
-            <p class="wordmark__title">LICENSED WEDDING OFFICIANT</p>
-            <p class="wordmark__contact">
-              <a href="mailto:weddings@heydaveball.com">weddings@heydaveball.com</a>
-              <a href="tel:+19056167678">905 616-7678</a>
-            </p>
+        <div class="tagline">
+          <h1 class="tagline__text" id="tagline">Married by Dave</h1>
+          <div class="tagline__meta">
+            <p class="label tagline__title">Licensed Wedding Officiant</p>
+            <svg class="ornament ornament--sm" aria-hidden="true"><use href="#ornament" /></svg>
           </div>
         </div>
-      </header>
+      </section>
 
       <!-- Welcome -->
       <section class="welcome" aria-label="Welcome">

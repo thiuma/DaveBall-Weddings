@@ -21,7 +21,7 @@
   --color-white: #ffffff;
 
   /* Type families */
-  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Caudex', Georgia, serif;
   --font-body: 'Montserrat', system-ui, sans-serif;
   --font-script: 'Pinyon Script', cursive;
 
@@ -29,6 +29,7 @@
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
   /* Sizes (desktop; fluid clamps are applied in code) */
