@@ -19,6 +19,9 @@ One-page, fully responsive site. Vite + plain HTML/CSS/JS, deployed to GitHub Pa
 - Brand guide → Paper design tokens + `src/styles/tokens.css` with the same names; designs and code
   use only tokens, so edits apply everywhere.
 
+## Designs
+- Two versions in Paper: "Version A — Essentials" and "Version B — Full" (see design/versions.md). Winner gets coded later; desktop only in Paper, responsive handled in code.
+
 ## Workflow
 - Design references come from Paper.
 - Phase 1: layout and UI. Phase 2 (later): interactions and animations.

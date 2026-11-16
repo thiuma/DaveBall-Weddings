@@ -1,0 +1,74 @@
+/*
+ * DaveBall Weddings — brand tokens (single source of truth).
+ * Same names as the design tokens in the Paper file, so design and code stay linked.
+ * Mood: botanical linen — forest-green bands, linen cards, brass candle lanterns.
+ */
+:root {
+  /* Brand */
+  --color-forest: #4b5b48;        /* primary brand colour */
+  --color-forest-deep: #2f3a2d;   /* dark sections, hover, text on light */
+  /* Secondary */
+  --color-linen: #f1ede6;         /* warm section ground */
+  --color-sage: #9ba296;          /* soft green: rules, quiet fills */
+  --color-brass: #b08d57;         /* single warm accent: prices, signature, ornament */
+  /* Grayscale (green-tinted neutral) */
+  --color-ink: #1c1e1b;           /* 900 — body text */
+  --color-gray-700: #3d403b;
+  --color-gray-500: #6e716b;
+  --color-gray-300: #b9bbb5;
+  --color-gray-100: #e6e7e3;
+  --color-paper: #f6f6f4;         /* 50 — page ground */
+  --color-white: #ffffff;
+
+  /* Type families */
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+  --font-script: 'Pinyon Script', cursive;
+
+  /* Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-extrabold: 800;
+
+  /* Sizes (desktop; fluid clamps are applied in code) */
+  --text-label: 13px;
+  --text-small: 15px;
+  --text-body: 18px;
+  --text-lead: 24px;
+  --text-h3: 32px;
+  --text-h2: 48px;
+  --text-h1: 72px;
+  --text-display: 160px;
+
+  /* Tracking */
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.08em;
+  --tracking-caps: 0.16em;
+
+  /* Leading */
+  --leading-display: 0.9;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  /* Spacing */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 96px;
+  --spacing-3xl: 144px;
+
+  /* Layout */
+  --container-text: 720px;
+  --container-wide: 1280px;
+  --gutter: 40px;
+
+  /* Radius */
+  --radius-none: 0px;
+  --radius-pill: 999px;
+  --radius-arch: 9999px 9999px 0 0;
+}
