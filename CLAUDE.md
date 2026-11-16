@@ -20,7 +20,7 @@ One-page, fully responsive site. Vite + plain HTML/CSS/JS, deployed to GitHub Pa
   use only tokens, so edits apply everywhere.
 
 ## Designs
-- Two versions in Paper: "Version A — Essentials" and "Version B — Full" (see design/versions.md). Winner gets coded later; desktop only in Paper, responsive handled in code.
+- Two versions in Paper: "Version A — Essentials" and "Version B — Full" (see design/versions.md). Version A is the active design; Version B is a frozen reference — never edit it. Winner gets coded later; desktop only in Paper, responsive handled in code.
 
 ## Workflow
 - Design references come from Paper.
