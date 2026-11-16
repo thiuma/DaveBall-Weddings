@@ -106,7 +106,9 @@ html { scroll-padding-top: 88px; }
   /* scales with width, but also with height so short screens keep room for the photo */
   font-size: clamp(56px, min(11vw, 17dvh), 168px);
   line-height: 0.95;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.055em;   /* tight, almost condensed */
+  word-spacing: -0.04em;
+  padding-bottom: 0.14em;     /* room for the g and y descenders above the label */
   color: var(--color-forest);
 }
 .tagline__title { color: var(--color-ink); }
