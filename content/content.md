@@ -17,7 +17,7 @@ user must approve first. Possible typos are flagged below rather than silently f
 
 If you are reading this: **Congratulations!** It means you're about to embark on one of life's truly special milestones.
 
-It's an honour to be considered to be your legal officiant for this rare occasion. With fully customized ceremonies that reflect your unique story, my mission is to highlight that special thing that brings the two of you together, and to facilitate sharing that singular connection with your community. As an Accredited Interfaith Official, I believe that love is love, and I specialize in weddings that blend each couples' unique backgrounds and traditions - faith or no faith. Co-creating a ceremony with me is about centering you, your story, and - dare I say - having fun along the way.
+It's an honour to be considered to be your legal officiant for this rare occasion. With fully customized ceremonies that reflect your unique story, my mission is to highlight that special thing that brings the two of you together, and to facilitate sharing that singular connection with your community. As an Accredited Interfaith Official, I believe that love is love, and I specialize in weddings that blend each couple's unique backgrounds and traditions - faith or no faith. Co-creating a ceremony with me is about centering you, your story, and - dare I say - having fun along the way.
 
 ## My services
 
@@ -27,7 +27,7 @@ The full package for those seeking a qualified officiant to guide them through t
 
 ### — Pre-wedding signing — $600+HST
 
-For those looking to elope, or those interested in tying the knot without all the bells and whistles, this short ceremony checks all the legal boxes without sacrificing significance or emotion. Ceremoies are typically 10 minutes in length.
+For those looking to elope, or those interested in tying the knot without all the bells and whistles, this short ceremony checks all the legal boxes without sacrificing significance or emotion. Ceremonies are typically 10 minutes in length.
 
 ### — Legal attending — $500+HST
 
@@ -50,7 +50,7 @@ If you are interested in a friend or family member performing the ceremony, I am
 
 > "Dave made us feel confident and comfortable. If we could do it again, we would pick Dave a million times!"
 >
-> — Leanne & Louie
+> — Leanne & Louis
 
 ## Call to action
 
@@ -62,12 +62,15 @@ Affiliated with the Angels of the Earth Interfaith Community
 
 ---
 
-## Flagged for confirmation (do not change without approval)
+## Approved corrections to the PDF (2026-11-16)
 
-1. **"Ceremoies"** in Pre-wedding signing → likely "Ceremonies".
-2. **"each couples'"** in the intro → likely "each couple's".
-3. **"Leanne & Louie"** in the testimonial, but the Drive photos are named **"Leanne & Louis"**. Which spelling is right?
-4. Phone number format: "905 616-7678" (could display as 905-616-7678, with a `tel:` link either way).
+1. "Ceremoies" → "Ceremonies" (Pre-wedding signing).
+2. "each couples'" → "each couple's" (intro).
+3. Testimonial signature "Leanne & Louie" → "Leanne & Louis", matching the Drive photo names.
+
+Still open: phone format "905 616-7678" (display choice only; link as `tel:+19056167678`).
+
+---
 
 ## Visual cues from the flyer (reference only — final design is ours)
 
