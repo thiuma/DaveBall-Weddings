@@ -78,7 +78,7 @@ a { color: inherit; }
   font-size: var(--text-small);
 }
 .wordmark__title { font-weight: var(--font-weight-medium); letter-spacing: var(--tracking-caps); color: var(--color-ink); }
-.wordmark__contact { display: flex; gap: 40px; flex-wrap: wrap; color: var(--color-gray-700); }
+.wordmark__contact { display: flex; gap: 8px 40px; flex-wrap: wrap; color: var(--color-gray-700); }
 .wordmark__contact a { text-decoration: none; }
 .wordmark__contact a:hover { text-decoration: underline; }
 
@@ -188,22 +188,30 @@ a { color: inherit; }
 .card--featured .card__cta { background: var(--color-linen); border-color: var(--color-linen); }
 .card--featured .card__cta:hover { background: var(--color-white); color: var(--color-forest-deep); }
 
-/* ---------- Included band ---------- */
-.included {
-  display: flex; gap: 120px;
-  padding: 128px 120px;
-  background: var(--color-forest);
-  color: var(--color-white);
+/* ---------- Included panel (part of services) ---------- */
+.services__offer { display: flex; flex-direction: column; gap: 24px; }
+.included-panel {
+  display: flex; gap: 64px;
+  padding: 48px;
+  background: var(--color-linen);
 }
-.included__col { flex: 1; display: flex; flex-direction: column; gap: 32px; }
-.included__title {
-  font-family: var(--font-display); font-weight: var(--font-weight-light);
-  font-size: 40px; letter-spacing: -0.02em; color: var(--color-linen); white-space: nowrap;
+.included-panel__group { flex: 2; display: flex; flex-direction: column; gap: 28px; }
+.included-panel__group--extras { flex: 1; padding-left: 64px; border-left: 1px solid var(--color-gray-300); }
+.included-panel__title {
+  font-family: var(--font-display); font-weight: var(--font-weight-regular);
+  font-size: var(--text-lead); letter-spacing: -0.015em; color: var(--color-forest-deep);
 }
-.included__list li { padding: 18px 0; border-top: 1px solid color-mix(in srgb, var(--color-linen) 30%, transparent); }
-.included__list li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--color-linen) 30%, transparent); }
+.included-panel__list { display: flex; flex-direction: column; gap: 18px; color: var(--color-gray-700); font-size: 17px; line-height: 1.5; }
+.included-panel__list--two-col { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 18px; }
+.included-panel__list li { display: flex; gap: 14px; align-items: flex-start; }
+.included-panel__icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; fill: var(--color-forest); }
+.included-panel__icon path { fill: none; stroke: var(--color-white); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.included-panel__icon--extra { fill: none; }
+.included-panel__icon--extra circle { stroke: var(--color-gray-500); stroke-width: 1; }
+.included-panel__icon--extra path { stroke: var(--color-gray-700); stroke-width: 1.4; }
 
 /* ---------- Testimonial: quote panel ---------- */
+.signature { font-family: var(--font-script); font-size: 56px; line-height: 1; color: var(--color-brass); }
 .quote-panel { display: flex; min-height: 840px; background: var(--color-linen); }
 .quote-panel__frame { flex: 1; display: flex; padding: 40px; }
 .quote-panel__inner {
@@ -261,15 +269,19 @@ a { color: inherit; }
   .services__cards { flex-direction: column; }
   .card { min-height: 0; }
   .card__title { min-height: 0; }
-  .included { flex-direction: column; gap: 64px; padding: 96px var(--gutter); }
+  .included-panel { flex-direction: column; gap: 40px; }
+  .included-panel__group--extras { padding-left: 0; padding-top: 40px; border-left: 0; border-top: 1px solid var(--color-gray-300); }
   .quote-panel__photo { width: 42%; }
 }
 
 @media (max-width: 760px) {
+  .wordmark__name { font-size: 14.6vw; }
   .about { flex-direction: column-reverse; align-items: stretch; }
   .about__portrait { width: 100%; }
   .services { gap: 48px; padding: 96px var(--gutter); }
   .card { padding: 32px 24px; }
+  .included-panel { padding: 32px 24px; }
+  .included-panel__list--two-col { grid-template-columns: 1fr; }
   .quote-panel { flex-direction: column-reverse; min-height: 0; }
   .quote-panel__photo { width: 100%; height: 420px; }
   .quote-panel__frame { padding: 24px; }
