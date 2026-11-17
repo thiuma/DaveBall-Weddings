@@ -1,7 +1,7 @@
 # DaveBall Weddings — project notes
 
 One-page, fully responsive site. Vite + plain HTML/CSS/JS, deployed to GitHub Pages
-(https://thiuma.github.io/DaveBall-Weddings/) on every push to `main`.
+(https://marriedbydave.ca) on every push to `main`.
 
 ## Content
 - Site: Dave Ball, Licensed Wedding Officiant (Toronto/GTA). Offerings: Full length ceremony ($750+HST),

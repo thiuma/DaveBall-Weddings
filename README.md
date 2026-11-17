@@ -2,7 +2,7 @@
 
 A fully responsive one-page website, built with Vite and plain HTML, CSS and JavaScript.
 
-**Live site:** https://thiuma.github.io/DaveBall-Weddings/
+**Live site:** https://marriedbydave.ca
 
 ## Run it locally
 
