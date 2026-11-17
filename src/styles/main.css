@@ -59,25 +59,30 @@ a { color: inherit; }
   pointer-events: none;
 }
 .topbar > * { pointer-events: auto; }
+/* No background on the name: its colour flips to stay readable over whatever
+   section is behind it (data-tone on each section, read by src/main.js). */
 .topbar__mark {
-  border-radius: var(--radius-md);
   display: inline-flex; align-items: center; min-height: 44px;
-  padding: 10px 18px;
-  background: color-mix(in srgb, var(--color-paper) 94%, transparent);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   font-family: var(--font-display); font-weight: var(--font-weight-bold);
-  font-size: 22px; color: var(--color-forest-deep); text-decoration: none;
+  font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+  color: var(--color-forest-deep);
+  transition: color 0.3s ease;
 }
 .topbar__cta {
   border-radius: var(--radius-md);
   display: inline-flex; align-items: center; min-height: 44px;
   padding: 12px 20px;
   background: var(--color-forest); color: var(--color-white);
-  font-weight: var(--font-weight-medium); font-size: 14px; text-decoration: none;
-  box-shadow: 0 6px 20px color-mix(in srgb, var(--color-ink) 18%, transparent);
-  transition: background-color 0.2s;
+  font-weight: var(--font-weight-medium); font-size: 13px; letter-spacing: var(--tracking-wide);
+  text-transform: uppercase; text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .topbar__cta:hover { background: var(--color-forest-deep); }
+
+/* Over dark sections (hero photo, booking): light name, light button */
+.topbar[data-tone="dark"] .topbar__mark { color: var(--color-white); text-shadow: 0 1px 12px color-mix(in srgb, var(--color-ink) 35%, transparent); }
+.topbar[data-tone="dark"] .topbar__cta { background: var(--color-mist); color: var(--color-forest-deep); }
+.topbar[data-tone="dark"] .topbar__cta:hover { background: var(--color-white); }
 
 /* ---------- Hero ---------- */
 html { scroll-padding-top: 88px; }
@@ -90,7 +95,11 @@ html { scroll-padding-top: 88px; }
   height: 100dvh;
   min-height: 560px;        /* very short windows scroll instead of crushing the photo */
 }
-.hero__photo { flex: 1 1 auto; min-height: 240px; overflow: hidden; }
+.hero__photo { position: relative; flex: 1 1 auto; min-height: 240px; overflow: hidden; }
+.hero__photo::after {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 180px; pointer-events: none;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-forest-deep) 55%, transparent), transparent);
+}
 .hero__photo .photo { object-position: 50% 42%; }
 
 .tagline {
@@ -303,8 +312,8 @@ html { scroll-padding-top: 88px; }
   .hero { height: 100svh; min-height: 520px; }
   .tagline__text { font-size: clamp(48px, min(15vw, 9svh), 96px); }
   .topbar { padding: 12px var(--gutter); }
-  .topbar__mark { font-size: 18px; padding: 10px 14px; }
-  .topbar__cta { padding: 10px 14px; font-size: 13px; }
+  .topbar__mark { font-size: 17px; }
+  .topbar__cta { padding: 10px 14px; font-size: 12px; }
   .about { flex-direction: column-reverse; align-items: stretch; }
   .about__portrait { width: 100%; }
   .services { gap: 48px; padding: 96px var(--gutter); }
