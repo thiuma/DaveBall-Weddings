@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
-// GitHub Pages serves this project at https://thiuma.github.io/DaveBall-Weddings/
-// so production assets need that base path. Local dev stays at "/".
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/DaveBall-Weddings/' : '/',
-}));
+// The site is served from the custom domain https://marriedbydave.ca at the root.
+// public/CNAME keeps that domain attached to GitHub Pages on every deploy.
+export default defineConfig({
+  base: '/',
+});
